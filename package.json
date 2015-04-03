@@ -1,0 +1,39 @@
+{
+  "name": "requirehit-package",
+  "version": "1.0.0",
+  "description": "package building handling",
+  "main": "lib/package.js",
+  "scripts": {
+    "test": "node node_modules/mocha/bin/mocha --globals setImmediate,clearImmediate --check-leaks --colors -t 10000 --reporter spec $(find test/* -name '*.test.js')"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/requirehit/package.git"
+  },
+  "keywords": [
+    "requirehit",
+    "internal",
+    "structure",
+    "package",
+    "class",
+    "constructor"
+  ],
+  "author": "José Moreira <jose.moreira@findhit.com>",
+  "license": "GPL v3",
+  "bugs": {
+    "url": "https://github.com/requirehit/package/issues"
+  },
+  "homepage": "https://github.com/requirehit/package",
+  "dependencies": {
+    "debug": "^2.1.3",
+    "findhit-class": "^0.1.1",
+    "findhit-util": "^0.2.7",
+    "requirehit-storage": "*",
+    "requirehit-builder": "*",
+    "requirehit-adapter": "*"
+  },
+  "devDependencies": {
+    "chai": "^2.2.0",
+    "mocha": "^2.2.1"
+  }
+}
