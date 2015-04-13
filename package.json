@@ -25,15 +25,18 @@
   },
   "homepage": "https://github.com/requirehit/package",
   "dependencies": {
+    "bluebird": "^2.9.24",
     "debug": "^2.1.3",
     "findhit-class": "^0.1.1",
     "findhit-util": "^0.2.7",
-    "requirehit-storage": "*",
+    "requirehit-adapter": "*",
     "requirehit-builder": "*",
-    "requirehit-adapter": "*"
+    "requirehit-storage": "*"
   },
   "devDependencies": {
+    "bootstrap": "^3.3.4",
     "chai": "^2.2.0",
-    "mocha": "^2.2.1"
+    "jquery": "^2.1.3",
+    "mocha": "^2.2.4"
   }
 }
