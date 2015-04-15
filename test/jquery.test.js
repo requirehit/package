@@ -3,6 +3,7 @@ var Package = require( '../lib/package' ),
     expect = chai.expect;
 
 describe( 'Package', function () {
+
     describe( 'jQuery', function () {
         var jQuery;
 
@@ -12,13 +13,14 @@ describe( 'Package', function () {
             return jQuery.load();
         });
 
-        it( 'should have jQuery dependencies', function () {
+        it( 'should have name set as "jquery"', function () {
             expect( jQuery.name ).to.be.equal( 'jquery' );
         });
 
-        it( 'test', function () {
-            console.log( jQuery );
-        })
+        it( 'should have no required dependencies', function () {
+            expect( jQuery.dependencies.required ).to.deep.equal( {} );
+        });
 
     });
+
 });
