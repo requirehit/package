@@ -5,30 +5,30 @@ var Package = require( '../lib/package' ),
 
 describe( 'Package', function () {
 
-    describe( 'Twitter Bootstrap', function () {
-        var bootstrap;
+    describe( 'findhit util', function () {
+        var Util;
 
         before(function () {
-            bootstrap = new Package( 'bootstrap' );
+            Util = new Package( 'findhit-util' );
 
-            return bootstrap.load();
+            return Util.load();
         });
 
-        it( 'should have set name as "bootstrap"', function () {
-            expect( bootstrap.name ).to.be.equal( 'bootstrap' );
+        it( 'should have set name as "findhit-util"', function () {
+            expect( Util.name ).to.be.equal( 'findhit-util' );
         });
 
         it( 'should have no required dependencies', function () {
-            expect( bootstrap.dependencies.required ).to.deep.equal( {} );
+            expect( Util.dependencies.required ).to.deep.equal({});
         });
 
         it( 'should have right path resolved', function () {
             expect(
                 path.dirname(
-                    require.resolve( '../node_modules/bootstrap/package.json' )
+                    require.resolve( '../node_modules/findhit-util/package.json' )
                 )
             ).to.be.equal(
-                bootstrap.path
+                Util.path
             );
         });
 

@@ -1,4 +1,5 @@
 var Package = require( '../lib/package' ),
+    path = require( 'path' ),
     chai = require( 'chai' ),
     expect = chai.expect;
 
@@ -23,6 +24,16 @@ describe( 'Package', function () {
                 // jquery/jquery-ui#1537 is solved.
                 // "jquery": "2.x"
             });
+        });
+
+        it( 'should have right path resolved', function () {
+            expect(
+                path.dirname(
+                    require.resolve( '../node_modules/jquery-ui/package.json' )
+                )
+            ).to.be.equal(
+                jQueryUI.path
+            );
         });
 
     });

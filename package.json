@@ -31,7 +31,8 @@
     "findhit-util": "^0.2.7",
     "requirehit-adapter": "*",
     "requirehit-builder": "*",
-    "requirehit-storage": "*"
+    "requirehit-storage": "*",
+    "walker": "^1.0.6"
   },
   "devDependencies": {
     "bootstrap": "^3.3.4",

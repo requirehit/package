@@ -5,30 +5,30 @@ var Package = require( '../lib/package' ),
 
 describe( 'Package', function () {
 
-    describe( 'Twitter Bootstrap', function () {
-        var bootstrap;
+    describe( 'Bluebird', function () {
+        var bluebird;
 
         before(function () {
-            bootstrap = new Package( 'bootstrap' );
+            bluebird = new Package( 'bluebird' );
 
-            return bootstrap.load();
+            return bluebird.load();
         });
 
-        it( 'should have set name as "bootstrap"', function () {
-            expect( bootstrap.name ).to.be.equal( 'bootstrap' );
+        it( 'should have set name as "bluebird"', function () {
+            expect( bluebird.name ).to.be.equal( 'bluebird' );
         });
 
         it( 'should have no required dependencies', function () {
-            expect( bootstrap.dependencies.required ).to.deep.equal( {} );
+            expect( bluebird.dependencies.required ).to.deep.equal( {} );
         });
 
         it( 'should have right path resolved', function () {
             expect(
                 path.dirname(
-                    require.resolve( '../node_modules/bootstrap/package.json' )
+                    require.resolve( '../node_modules/bluebird/package.json' )
                 )
             ).to.be.equal(
-                bootstrap.path
+                bluebird.path
             );
         });
 
