@@ -1,4 +1,4 @@
-var Package = require( '../lib/package' ),
+var Package = require( '../../lib/package' ),
     path = require( 'path' ),
     chai = require( 'chai' ),
     expect = chai.expect;
@@ -27,7 +27,7 @@ describe( 'Package', function () {
         it( 'should have right path resolved', function () {
             expect(
                 path.dirname(
-                    require.resolve( '../node_modules/findhit-class/package.json' )
+                    require.resolve( '../../node_modules/findhit-class/package.json' )
                 )
             ).to.be.equal(
                 Class.path
