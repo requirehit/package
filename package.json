@@ -2,7 +2,7 @@
   "name": "requirehit-package",
   "version": "1.0.0",
   "description": "package building handling",
-  "main": "lib/package.js",
+  "main": "index.js",
   "scripts": {
     "test": "node_modules/jshint/bin/jshint . && node_modules/mocha/bin/mocha --globals setImmediate,clearImmediate --check-leaks --colors -t 10000 --reporter spec $(find test/* -name '*.test.js')"
   },

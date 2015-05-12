@@ -1,15 +1,15 @@
-var Package = require( '../../lib/package' ),
+var Package = require( '../../../' ),
     path = require( 'path' ),
     chai = require( 'chai' ),
     expect = chai.expect;
 
-describe( 'Package', function () {
+describe( 'Package.Builder', function () {
 
     describe( 'Bluebird', function () {
         var bluebird;
 
         before(function () {
-            bluebird = new Package( 'bluebird' );
+            bluebird = new Package.Builder( 'bluebird' );
 
             return bluebird.load();
         });

@@ -1,15 +1,15 @@
-var Package = require( '../../lib/package' ),
+var Package = require( '../../../' ),
     path = require( 'path' ),
     chai = require( 'chai' ),
     expect = chai.expect;
 
-describe( 'Package', function () {
+describe( 'Package.Builder', function () {
 
     describe( 'Twitter Bootstrap', function () {
         var bootstrap;
 
         before(function () {
-            bootstrap = new Package( 'bootstrap' );
+            bootstrap = new Package.Builder( 'bootstrap' );
 
             return bootstrap.load();
         });

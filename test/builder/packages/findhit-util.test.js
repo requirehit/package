@@ -1,15 +1,15 @@
-var Package = require( '../../lib/package' ),
+var Package = require( '../../../' ),
     path = require( 'path' ),
     chai = require( 'chai' ),
     expect = chai.expect;
 
-describe( 'Package', function () {
+describe( 'Package.Builder', function () {
 
     describe( 'findhit util', function () {
         var Util;
 
         before(function () {
-            Util = new Package( 'findhit-util' );
+            Util = new Package.Builder( 'findhit-util' );
 
             return Util.load();
         });

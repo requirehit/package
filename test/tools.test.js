@@ -1,4 +1,4 @@
-var Package = require( '../lib/package' ),
+var Package = require( '../../' ),
     path = require( 'path' ),
     chai = require( 'chai' ),
     expect = chai.expect,

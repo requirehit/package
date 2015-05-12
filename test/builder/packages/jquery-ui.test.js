@@ -1,15 +1,15 @@
-var Package = require( '../../lib/package' ),
+var Package = require( '../../../' ),
     path = require( 'path' ),
     chai = require( 'chai' ),
     expect = chai.expect;
 
-describe( 'Package', function () {
+describe( 'Package.Builder', function () {
 
     describe( 'jQuery UI', function () {
         var jQueryUI;
 
         before(function () {
-            jQueryUI = new Package( 'jquery-ui' );
+            jQueryUI = new Package.Builder( 'jquery-ui' );
 
             return jQueryUI.load();
         });

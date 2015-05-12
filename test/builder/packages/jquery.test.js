@@ -1,15 +1,15 @@
-var Package = require( '../../lib/package' ),
+var Package = require( '../../../' ),
     path = require( 'path' ),
     chai = require( 'chai' ),
     expect = chai.expect;
 
-describe( 'Package', function () {
+describe( 'Package.Builder', function () {
 
     describe( 'jQuery', function () {
         var jQuery;
 
         before(function () {
-            jQuery = new Package( 'jquery' );
+            jQuery = new Package.Builder( 'jquery' );
 
             return jQuery.load();
         });
